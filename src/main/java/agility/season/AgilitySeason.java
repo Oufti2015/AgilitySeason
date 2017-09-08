@@ -1,5 +1,6 @@
 package agility.season;
 
+import java.io.File;
 import java.io.IOException;
 
 import agility.season.controllers.MainController;
@@ -34,11 +35,10 @@ public class AgilitySeason extends Application {
 	initRootLayout();
 	// primaryStage.setMaximized(true);
 	// primaryStage.setFullScreen(true);
-	// Scene scene = primaryStage.getScene();
-	// File f = new File("bankFX.css");
-	// scene.getStylesheets().clear();
-	// scene.getStylesheets().add("file:///" +
-	// f.getAbsolutePath().replace("\\", "/"));
+	Scene scene = primaryStage.getScene();
+	File f = new File("agility.css");
+	scene.getStylesheets().clear();
+	scene.getStylesheets().add("file:///" + f.getAbsolutePath().replace("\\", "/"));
 
 	// InputStream resourceAsStream =
 	// AgilitySeason.class.getResourceAsStream(ICON);

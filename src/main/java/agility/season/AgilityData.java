@@ -59,8 +59,8 @@ public class AgilityData {
 	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.JULY, 9), "Arlon", "5", 18));
 	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.JULY, 21), "Courcelles", true));
 	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.JULY, 21), "Courcelles", "0", 4));
-	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.JULY, 22), "Crisnée", "15", 19));
-	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.JULY, 22), "Crisnée", "5", 12));
+	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.JULY, 22), "Crisnee", "15", 19));
+	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.JULY, 22), "Crisnee", "5", 12));
 	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.JULY, 23), "Seneffe", true));
 	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.JULY, 23), "Seneffe", "0", 4));
 	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.AUGUST, 26), "Genebos", "10", 66));

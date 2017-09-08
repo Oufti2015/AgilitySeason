@@ -17,7 +17,7 @@ public class Resultat implements Comparable<Resultat> {
 	super();
 	this.activite = activite;
 	this.date = date;
-	this.concours = concours;
+	this.concours = concours.toUpperCase();
 	this.dk = dk;
 	this.classement = 200;
     }
@@ -26,7 +26,7 @@ public class Resultat implements Comparable<Resultat> {
 	super();
 	this.activite = activite;
 	this.date = date;
-	this.concours = concours;
+	this.concours = concours.toUpperCase();
 	this.points = points;
 	this.classement = classement;
 	this.dk = false;

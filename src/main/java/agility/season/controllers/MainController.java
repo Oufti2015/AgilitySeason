@@ -78,6 +78,14 @@ public class MainController {
 		.map(r -> new ResultatModel(r))
 		.collect(Collectors.toList());
 
+	int i = 1;
+	for (ResultatModel res : agilityResultats) {
+	    res.id(i++);
+	}
+	i = 1;
+	for (ResultatModel res : jumpingResultats) {
+	    res.id(i++);
+	}
 	System.out.println("agilityResultats " + agilityResultats.size());
 	System.out.println("jumpingResultats " + jumpingResultats.size());
 

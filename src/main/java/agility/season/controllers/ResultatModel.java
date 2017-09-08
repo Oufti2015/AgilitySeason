@@ -11,7 +11,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class ResultatModel {
-    final private IntegerProperty id;
+    private IntegerProperty id;
     final private ObjectProperty<LocalDate> date;
     final private StringProperty concours;
     final private StringProperty points;
@@ -23,6 +23,10 @@ public class ResultatModel {
 	concours = new SimpleStringProperty(resultat.getConcours());
 	points = new SimpleStringProperty(resultat.getDk() ? "DK" : resultat.getPoints());
 	classement = new SimpleIntegerProperty(resultat.getClassement());
+    }
+
+    public void id(Integer i) {
+	id = new SimpleIntegerProperty(i);
     }
 
     public IntegerProperty id() {
