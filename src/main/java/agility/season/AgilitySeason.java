@@ -26,11 +26,9 @@ public class AgilitySeason extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-	// OuftiBankFX.eventBus.post(new Exception("Test"));
-
 	// set title
 	this.primaryStage = primaryStage;
-	primaryStage.setTitle("Oufti Bank");
+	primaryStage.setTitle("Agility Season");
 
 	initRootLayout();
 	// primaryStage.setMaximized(true);

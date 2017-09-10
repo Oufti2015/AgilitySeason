@@ -71,6 +71,10 @@ public class AgilityData {
 	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.SEPTEMBER, 2), "Jamioulx", true));
 	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.SEPTEMBER, 3), "Jamioulx", "5", 17));
 	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.SEPTEMBER, 3), "Jamioulx", "8.03", 26));
+	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.SEPTEMBER, 9), "Dohlain", true));
+	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.SEPTEMBER, 9), "Dohlain", "5", 8));
+	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.SEPTEMBER, 10), "Procanina", true));
+	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.SEPTEMBER, 10), "Procanina", "5", 14));
 
 	hyuma.setResultats(resultats);
 
