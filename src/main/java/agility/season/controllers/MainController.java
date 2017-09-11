@@ -1,14 +1,19 @@
 package agility.season.controllers;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import agility.season.AgilitySeason;
 import agility.season.model.Activite;
 import agility.season.model.Chien;
+import agility.season.model.Resultat;
 import agility.season.utils.NewResultatChange;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -68,6 +73,8 @@ public class MainController {
 
 	chiens.getSelectionModel().select(0);
 
+	activiteAdd.getItems().addAll(Activite.values());
+
 	disableForm();
     }
 
@@ -88,7 +95,7 @@ public class MainController {
 	pointsAdd.setDisable(false);
 	classementAdd.setDisable(false);
 	dkAdd.setDisable(false);
-	addButton.setDisable(true);
+	addButton.setDisable(false);
     }
 
     public void setData(List<Chien> chiensData) {
@@ -152,11 +159,48 @@ public class MainController {
     @FXML
     public void selectDKAdd() {
 	System.out.println("selectDKAdd");
+	if (dkAdd.isSelected()) {
+	    pointsAdd.setText("");
+	    pointsAdd.setDisable(true);
+	    classementAdd.setText("200");
+	    classementAdd.setDisable(true);
+	} else {
+	    pointsAdd.setDisable(false);
+	    classementAdd.setText("");
+	    classementAdd.setDisable(false);
+	}
     }
 
     @FXML
     public void addResultat() {
 	System.out.println("addResultat");
-	AgilitySeason.eventBus.post(new NewResultatChange());
+
+	Activite activite = activiteAdd.getValue();
+	LocalDate date = dateAdd.getValue();
+	String concours = concoursAdd.getText();
+	String points = pointsAdd.getText();
+	String classement = classementAdd.getText();
+	Boolean dk = dkAdd.isSelected();
+
+	Chien chien = chiens.getSelectionModel().getSelectedItem();
+
+	try {
+	    if (chien == null) {
+		new Alert(AlertType.ERROR, "Il faut choisir un chien...", ButtonType.OK).showAndWait();
+	    } else if (activite == null || date == null || concours.isEmpty()
+		    || (!dk && (points.isEmpty() || classement.isEmpty()))) {
+		new Alert(AlertType.ERROR, "Il faut remplir tout les champs...", ButtonType.OK).showAndWait();
+	    } else {
+		if (dk) {
+		    chien.getResultats().add(new Resultat(activite, date, concours, dk));
+		} else {
+		    chien.getResultats()
+			    .add(new Resultat(activite, date, concours, points, Integer.parseInt(classement)));
+		}
+		AgilitySeason.eventBus.post(new NewResultatChange());
+	    }
+	} catch (NumberFormatException nfe) {
+	    new Alert(AlertType.ERROR, "Le classement doit être numérique...", ButtonType.OK).showAndWait();
+	}
     }
 }
