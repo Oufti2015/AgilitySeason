@@ -559,30 +559,6 @@
           "points": null,
           "classement": 200,
           "dk": true
-        },
-        {
-          "activite": "AGILITY",
-          "date": {
-            "year": 2017,
-            "month": 9,
-            "day": 16
-          },
-          "concours": "FLORENVILLE",
-          "points": "5",
-          "classement": 12,
-          "dk": false
-        },
-        {
-          "activite": "JUMPING",
-          "date": {
-            "year": 2017,
-            "month": 9,
-            "day": 16
-          },
-          "concours": "FLORENVILLE",
-          "points": null,
-          "classement": 200,
-          "dk": true
         }
       ]
     }

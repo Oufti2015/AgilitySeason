@@ -198,6 +198,7 @@ public class MainController {
 			    .add(new Resultat(activite, date, concours, points, Integer.parseInt(classement)));
 		}
 		AgilitySeason.eventBus.post(new NewResultatChange());
+		selectChien();
 	    }
 	} catch (NumberFormatException nfe) {
 	    new Alert(AlertType.ERROR, "Le classement doit être numérique...", ButtonType.OK).showAndWait();
