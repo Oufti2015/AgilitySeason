@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -10,24 +14,22 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agility.season.controllers.MainController">
    <children>
-      <GridPane minHeight="600.0" minWidth="1000.0" AnchorPane.topAnchor="0.0">
+      <GridPane minHeight="660" minWidth="1200.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="600.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="600.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="522.0" minHeight="10.0" prefHeight="521.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <ComboBox fx:id="chiens" onAction="#selectChien" prefWidth="300.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <TableView fx:id="agilityTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-            </TableView>
-            <TableView fx:id="jumpingTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-            </TableView>
+            <TableView fx:id="agilityTableView" prefHeight="480.0" prefWidth="580.0" GridPane.rowIndex="3" />
+            <TableView fx:id="jumpingTableView" prefHeight="480.0" prefWidth="580.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label style="-fx-font-size: 20;" text="Agility" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Label style="-fx-font-size: 20;" text="Jumping" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <GridPane alignment="CENTER" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
@@ -79,6 +81,35 @@
                         <Label fx:id="total" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="131.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="156.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0" prefWidth="417.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ComboBox fx:id="activiteAdd" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <DatePicker fx:id="dateAdd" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <TextField fx:id="concoursAdd" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="pointsAdd" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <TextField fx:id="classementAdd" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <RadioButton fx:id="dkAdd" mnemonicParsing="false" onAction="#selectDKAdd" text="DK" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addResultat" text="AJOUTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label text="ACTIVITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="DATE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="CONCOURS" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="PTS" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="CLS" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
          </children>

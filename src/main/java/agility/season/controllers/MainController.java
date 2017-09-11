@@ -6,11 +6,15 @@ import java.util.stream.Collectors;
 import agility.season.AgilitySeason;
 import agility.season.model.Activite;
 import agility.season.model.Chien;
-import agility.season.model.Resultat;
+import agility.season.utils.NewResultatChange;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import lombok.Setter;
 
 public class MainController {
@@ -28,6 +32,20 @@ public class MainController {
     Label jumpingTotal;
     @FXML
     Label total;
+    @FXML
+    private ComboBox<Activite> activiteAdd;
+    @FXML
+    private DatePicker dateAdd;
+    @FXML
+    private TextField concoursAdd;
+    @FXML
+    private TextField pointsAdd;
+    @FXML
+    private TextField classementAdd;
+    @FXML
+    private RadioButton dkAdd;
+    @FXML
+    private Button addButton;
 
     private ResultatsTableColumns agility;
     private ResultatsTableColumns jumping;
@@ -50,8 +68,27 @@ public class MainController {
 
 	chiens.getSelectionModel().select(0);
 
-	System.out.println("selected " + chiens.getSelectionModel().getSelectedIndex());
+	disableForm();
+    }
 
+    private void disableForm() {
+	activiteAdd.setDisable(true);
+	dateAdd.setDisable(true);
+	concoursAdd.setDisable(true);
+	pointsAdd.setDisable(true);
+	classementAdd.setDisable(true);
+	dkAdd.setDisable(true);
+	addButton.setDisable(true);
+    }
+
+    private void enableForm() {
+	activiteAdd.setDisable(false);
+	dateAdd.setDisable(false);
+	concoursAdd.setDisable(false);
+	pointsAdd.setDisable(false);
+	classementAdd.setDisable(false);
+	dkAdd.setDisable(false);
+	addButton.setDisable(true);
     }
 
     public void setData(List<Chien> chiensData) {
@@ -60,6 +97,7 @@ public class MainController {
 
     @FXML
     public void selectChien() {
+	enableForm();
 
 	Chien chien = chiens.getSelectionModel().getSelectedItem();
 	System.out.println("selected " + chien + " resultats " + chien.getResultats().size());
@@ -111,14 +149,14 @@ public class MainController {
 	return result + ((15 - count) * 200);
     }
 
-    private void completeResultats(Chien chien, Activite activite) {
-	long count = chien.getResultats().stream()
-		.filter(r -> activite.equals(r.getActivite())).count();
-	if (count < 15) {
-	    for (long i = count; i < 15; i++) {
-		chien.getResultats().add(new Resultat(activite));
-	    }
-	}
+    @FXML
+    public void selectDKAdd() {
+	System.out.println("selectDKAdd");
+    }
 
+    @FXML
+    public void addResultat() {
+	System.out.println("addResultat");
+	AgilitySeason.eventBus.post(new NewResultatChange());
     }
 }

@@ -1,12 +1,13 @@
 package agility.season.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Data;
 
 @Data
-public class Chien {
+public class Chien implements Serializable {
     private String nom;
     private List<Resultat> resultats = new ArrayList<Resultat>();
 

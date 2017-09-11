@@ -1,11 +1,12 @@
 package agility.season.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import lombok.Data;
 
 @Data
-public class Resultat implements Comparable<Resultat> {
+public class Resultat implements Comparable<Resultat>, Serializable {
     private Activite activite;
     private LocalDate date;
     private String concours;

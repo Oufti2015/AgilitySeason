@@ -1,0 +1,566 @@
+{
+  "chiens": [
+    {
+      "nom": "Hyuma",
+      "resultats": [
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 4,
+            "day": 15
+          },
+          "concours": "HANNUT",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 4,
+            "day": 15
+          },
+          "concours": "HANNUT",
+          "points": "0",
+          "classement": 10,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 4,
+            "day": 22
+          },
+          "concours": "SENZEILLE",
+          "points": "20",
+          "classement": 20,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 4,
+            "day": 22
+          },
+          "concours": "SENZEILLE",
+          "points": "10",
+          "classement": 16,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 4,
+            "day": 23
+          },
+          "concours": "MONT-SAINT-GUIBERT",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 4,
+            "day": 23
+          },
+          "concours": "MONT-SAINT-GUIBERT",
+          "points": "0",
+          "classement": 3,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 5,
+            "day": 7
+          },
+          "concours": "DAMPREMY",
+          "points": "15",
+          "classement": 26,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 5,
+            "day": 7
+          },
+          "concours": "DAMPREMY",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 5,
+            "day": 20
+          },
+          "concours": "CANIS",
+          "points": "15",
+          "classement": 61,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 5,
+            "day": 20
+          },
+          "concours": "CANIS",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 5,
+            "day": 21
+          },
+          "concours": "CANIS",
+          "points": "13.82",
+          "classement": 83,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 5,
+            "day": 21
+          },
+          "concours": "CANIS",
+          "points": "15",
+          "classement": 98,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 3
+          },
+          "concours": "FESCHAUX",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 3
+          },
+          "concours": "FESCHAUX",
+          "points": "5",
+          "classement": 9,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 4
+          },
+          "concours": "FESCHAUX",
+          "points": "10",
+          "classement": 16,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 4
+          },
+          "concours": "FESCHAUX",
+          "points": "5",
+          "classement": 25,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 10
+          },
+          "concours": "BELLECOURT",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 10
+          },
+          "concours": "BELLECOURT",
+          "points": "5",
+          "classement": 20,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 18
+          },
+          "concours": "MARBAIS",
+          "points": "10",
+          "classement": 14,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 6,
+            "day": 18
+          },
+          "concours": "MARBAIS",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 1
+          },
+          "concours": "CCSL",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 1
+          },
+          "concours": "CCSL",
+          "points": "0",
+          "classement": 7,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 8
+          },
+          "concours": "ARLON",
+          "points": "5",
+          "classement": 18,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 9
+          },
+          "concours": "ARLON",
+          "points": "5",
+          "classement": 19,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 8
+          },
+          "concours": "ARLON",
+          "points": "5",
+          "classement": 16,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 9
+          },
+          "concours": "ARLON",
+          "points": "5",
+          "classement": 18,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 21
+          },
+          "concours": "COURCELLES",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 21
+          },
+          "concours": "COURCELLES",
+          "points": "0",
+          "classement": 4,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 22
+          },
+          "concours": "CRISNEE",
+          "points": "15",
+          "classement": 19,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 22
+          },
+          "concours": "CRISNEE",
+          "points": "5",
+          "classement": 12,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 23
+          },
+          "concours": "SENEFFE",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 7,
+            "day": 23
+          },
+          "concours": "SENEFFE",
+          "points": "0",
+          "classement": 4,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 8,
+            "day": 26
+          },
+          "concours": "GENEBOS",
+          "points": "10",
+          "classement": 66,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 8,
+            "day": 26
+          },
+          "concours": "GENEBOS",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 8,
+            "day": 27
+          },
+          "concours": "GENEBOS",
+          "points": "0",
+          "classement": 20,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 8,
+            "day": 27
+          },
+          "concours": "GENEBOS",
+          "points": "0",
+          "classement": 1,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 2
+          },
+          "concours": "JAMIOULX",
+          "points": "10",
+          "classement": 26,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 2
+          },
+          "concours": "JAMIOULX",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 3
+          },
+          "concours": "JAMIOULX",
+          "points": "5",
+          "classement": 17,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 3
+          },
+          "concours": "JAMIOULX",
+          "points": "8.03",
+          "classement": 26,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 9
+          },
+          "concours": "DOHLAIN",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 9
+          },
+          "concours": "DOHLAIN",
+          "points": "5",
+          "classement": 8,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 10
+          },
+          "concours": "PROCANINA",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 10
+          },
+          "concours": "PROCANINA",
+          "points": "5",
+          "classement": 14,
+          "dk": false
+        }
+      ]
+    },
+    {
+      "nom": "Muse",
+      "resultats": [
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 10
+          },
+          "concours": "PROCANINA",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 10
+          },
+          "concours": "PROCANINA",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        }
+      ]
+    }
+  ]
+}
