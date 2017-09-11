@@ -51,6 +51,10 @@ public class MainController {
     private RadioButton dkAdd;
     @FXML
     private Button addButton;
+    @FXML
+    private TextField newDog;
+    @FXML
+    private Button newDogButton;
 
     private ResultatsTableColumns agility;
     private ResultatsTableColumns jumping;
@@ -65,15 +69,18 @@ public class MainController {
      */
     @FXML
     private void initialize() {
-	System.out.println("chiens " + chiens);
-	System.out.println("agilityTableView " + agilityTableView);
-	System.out.println("jumpingTableView " + jumpingTableView);
+	// System.out.println("chiens " + chiens);
+	// System.out.println("agilityTableView " + agilityTableView);
+	// System.out.println("jumpingTableView " + jumpingTableView);
 	agility = new ResultatsTableColumns(agilityTableView);
 	jumping = new ResultatsTableColumns(jumpingTableView);
 
-	chiens.getSelectionModel().select(0);
-
 	activiteAdd.getItems().addAll(Activite.values());
+
+	// agilityTotal.getStyleClass().clear();
+	agilityTotal.getStyleClass().add("points");
+	jumpingTotal.getStyleClass().add("points");
+	total.getStyleClass().add("points");
 
 	disableForm();
     }
@@ -100,6 +107,8 @@ public class MainController {
 
     public void setData(List<Chien> chiensData) {
 	chiens.getItems().addAll(chiensData);
+	chiens.getSelectionModel().select(0);
+	selectChien();
     }
 
     @FXML
@@ -158,7 +167,6 @@ public class MainController {
 
     @FXML
     public void selectDKAdd() {
-	System.out.println("selectDKAdd");
 	if (dkAdd.isSelected()) {
 	    pointsAdd.setText("");
 	    pointsAdd.setDisable(true);
@@ -173,8 +181,6 @@ public class MainController {
 
     @FXML
     public void addResultat() {
-	System.out.println("addResultat");
-
 	Activite activite = activiteAdd.getValue();
 	LocalDate date = dateAdd.getValue();
 	String concours = concoursAdd.getText();
@@ -202,6 +208,22 @@ public class MainController {
 	    }
 	} catch (NumberFormatException nfe) {
 	    new Alert(AlertType.ERROR, "Le classement doit être numérique...", ButtonType.OK).showAndWait();
+	}
+    }
+
+    @FXML
+    public void newDog() {
+	String nomDuChien = newDog.getText();
+	if (!nomDuChien.isEmpty()) {
+	    final Alert alert = new Alert(AlertType.CONFIRMATION, "Voulez-vous creer " + nomDuChien + " ?",
+		    ButtonType.YES, ButtonType.NO);
+	    alert.showAndWait();
+	    if (alert.getResult().equals(ButtonType.YES)) {
+		Chien chien = new Chien(nomDuChien);
+		owner.addChien(chien);
+		chiens.getItems().add(chien);
+		newDog.setText("");
+	    }
 	}
     }
 }

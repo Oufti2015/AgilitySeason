@@ -7,6 +7,7 @@ import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
 
 import agility.season.controllers.MainController;
+import agility.season.model.Chien;
 import agility.season.utils.NewResultatChange;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -80,4 +81,8 @@ public class AgilitySeason extends Application {
 	adf.save(data);
     }
 
+    public void addChien(Chien chien) {
+	data.addChien(chien);
+	eventBus.post(new NewResultatChange());
+    }
 }
