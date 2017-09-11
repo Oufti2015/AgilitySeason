@@ -13,6 +13,16 @@ public class Resultat implements Comparable<Resultat> {
     private Integer classement;
     private Boolean dk;
 
+    public Resultat(Activite activite) {
+	super();
+	this.activite = activite;
+	this.date = LocalDate.now();
+	this.concours = "-------";
+	this.dk = false;
+	this.points = "---";
+	this.classement = 200;
+    }
+
     public Resultat(Activite activite, LocalDate date, String concours, Boolean dk) {
 	super();
 	this.activite = activite;
@@ -36,7 +46,7 @@ public class Resultat implements Comparable<Resultat> {
     public int compareTo(Resultat o) {
 	int result = 0;
 	result = classement.compareTo(o.classement);
-	if (result == 0) {
+	if (result == 0 && date != null) {
 	    result = date.compareTo(o.date);
 	}
 	return result;

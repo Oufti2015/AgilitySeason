@@ -237,3 +237,7 @@
 	-fx-background-color: blue;
 	-fx-text-fill: yellow;
 }
+.ok {
+	-fx-background-color: black;
+	-fx-text-fill: yellow;
+}

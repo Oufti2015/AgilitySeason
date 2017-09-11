@@ -35,7 +35,7 @@ public class ResultatsTableColumns {
 	columnSize(concoursColumn, 200);
 	table.getColumns().add(concoursColumn);
 
-	pointsColumn = new TableColumn<>("Résultat");
+	pointsColumn = new TableColumn<>("Rï¿½sultat");
 	pointsColumn.setCellValueFactory(new PropertyValueFactory<ResultatModel, String>("points"));
 	columnSize(pointsColumn, 60);
 	table.getColumns().add(pointsColumn);
@@ -59,17 +59,19 @@ public class ResultatsTableColumns {
 		    TableRow<ResultatModel> currentRow = getTableRow();
 
 		    ResultatModel resultat = currentRow.getItem();
-		    if (!isEmpty()) {
-
-			if (resultat.getPoints().equals("DK")) {
-			    // currentRow.setStyle("-fx-text-fill:yellow;
-			    // -fx-background-color:lightcoral");
+		    currentRow.getStyleClass().clear();
+		    if (!isEmpty() && resultat != null) {
+			if ("DK".equals(resultat.getPoints())) {
 			    currentRow.getStyleClass().add("dk");
-			} else if (resultat.getPoints().equals("0")) {
-			    // currentRow.setStyle("-fx-text-fill:black;
-			    // -fx-background-color:lightblue");
+			} else if ("0".equals(resultat.getPoints())) {
 			    currentRow.getStyleClass().add("sansfaute");
+			} else if ("---".equals(resultat.getPoints())) {
+			    currentRow.getStyleClass().add("noexists");
+			} else {
+			    currentRow.getStyleClass().add("ok");
 			}
+		    } else {
+			currentRow.getStyleClass().add("ok");
 		    }
 		}
 	    };

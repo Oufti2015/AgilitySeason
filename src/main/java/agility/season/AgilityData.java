@@ -78,24 +78,14 @@ public class AgilityData {
 
 	hyuma.setResultats(resultats);
 
-	System.out.println(hyuma + " : " + resultats.size() + " résultats enregistrés.");
+	Chien muse = new Chien("Muse");
+	addChien(muse);
 
-	System.out.println("-----------------------------------------------------------------------------");
-	List<Resultat> tableau = tableau(hyuma, Activite.AGILITY);
-	tableau.stream().forEach(r -> System.out.println(r));
+	resultats = new ArrayList<>();
+	resultats.add(new Resultat(Activite.AGILITY, LocalDate.of(2017, Month.SEPTEMBER, 10), "Procanina", true));
+	resultats.add(new Resultat(Activite.JUMPING, LocalDate.of(2017, Month.SEPTEMBER, 10), "Procanina", true));
 
-	int sumAgility = tableau.stream().mapToInt(Resultat::getClassement).sum();
-	System.out.println("-----------------------------------------------------------------------------");
-	System.out.println(String.format("Total Agility   : %45d", sumAgility));
-	System.out.println("-----------------------------------------------------------------------------");
-	tableau = tableau(hyuma, Activite.JUMPING);
-	tableau.stream().forEach(r -> System.out.println(r));
-
-	int sumJumping = tableau.stream().mapToInt(Resultat::getClassement).sum();
-	System.out.println("-----------------------------------------------------------------------------");
-	System.out.println(String.format("Total Jumping   : %45d", sumJumping));
-	System.out.println("-----------------------------------------------------------------------------");
-	System.out.println(String.format("Total           : %45d", (sumAgility + sumJumping)));
+	muse.setResultats(resultats);
     }
 
     public List<Resultat> tableau(Chien chien, Activite activite) {

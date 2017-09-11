@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import agility.season.AgilitySeason;
 import agility.season.model.Activite;
 import agility.season.model.Chien;
+import agility.season.model.Resultat;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -63,6 +64,9 @@ public class MainController {
 	Chien chien = chiens.getSelectionModel().getSelectedItem();
 	System.out.println("selected " + chien + " resultats " + chien.getResultats().size());
 
+	// completeResultats(chien, Activite.AGILITY);
+	// completeResultats(chien, Activite.JUMPING);
+
 	List<ResultatModel> agilityResultats = chien.getResultats()
 		.stream()
 		.filter(r -> Activite.AGILITY.equals(r.getActivite()))
@@ -92,11 +96,29 @@ public class MainController {
 	agilityTableView.getItems().setAll(agilityResultats);
 	jumpingTableView.getItems().setAll(jumpingResultats);
 
-	int agilitySum = agilityResultats.stream().mapToInt(ResultatModel::getClassement).sum();
-	int jumpingSum = jumpingResultats.stream().mapToInt(ResultatModel::getClassement).sum();
+	int agilitySum = calculateTotal(agilityResultats);
+	int jumpingSum = calculateTotal(jumpingResultats);
+
 	agilityTotal.setText("" + agilitySum);
 	jumpingTotal.setText("" + jumpingSum);
 
 	total.setText("" + (agilitySum + jumpingSum));
+    }
+
+    private int calculateTotal(List<ResultatModel> resultats) {
+	int result = resultats.stream().mapToInt(ResultatModel::getClassement).sum();
+	int count = resultats.size();
+	return result + ((15 - count) * 200);
+    }
+
+    private void completeResultats(Chien chien, Activite activite) {
+	long count = chien.getResultats().stream()
+		.filter(r -> activite.equals(r.getActivite())).count();
+	if (count < 15) {
+	    for (long i = count; i < 15; i++) {
+		chien.getResultats().add(new Resultat(activite));
+	    }
+	}
+
     }
 }
