@@ -19,31 +19,31 @@ public class ResultatsTableColumns {
     private TableColumn<ResultatModel, Integer> classementColumn;
 
     public ResultatsTableColumns(TableView<ResultatModel> table) {
-	idColumn = new TableColumn<>("Id");
+	idColumn = new TableColumn<>("Id".toUpperCase());
 	idColumn.setCellValueFactory(new PropertyValueFactory<ResultatModel, String>("id"));
-	columnSize(idColumn, 30);
+	columnSize(idColumn, 40);
 	table.getColumns().add(idColumn);
 
-	dateColumn = new TableColumn<>("Date");
+	dateColumn = new TableColumn<>("Date".toUpperCase());
 	dateColumn.setCellValueFactory(new PropertyValueFactory<ResultatModel, LocalDate>("date"));
 	table.getColumns().add(dateColumn);
-	columnSize(dateColumn, 100);
+	columnSize(dateColumn, 120);
 	formatLocalDateColumn(dateColumn);
 
-	concoursColumn = new TableColumn<>("Concours");
+	concoursColumn = new TableColumn<>("Concours".toUpperCase());
 	concoursColumn.setCellValueFactory(new PropertyValueFactory<ResultatModel, String>("concours"));
-	columnSize(concoursColumn, 200);
+	columnSize(concoursColumn, 230);
 	table.getColumns().add(concoursColumn);
 
-	pointsColumn = new TableColumn<>("R�sultat");
+	pointsColumn = new TableColumn<>("PTS".toUpperCase());
 	pointsColumn.setCellValueFactory(new PropertyValueFactory<ResultatModel, String>("points"));
-	columnSize(pointsColumn, 60);
+	columnSize(pointsColumn, 80);
 	table.getColumns().add(pointsColumn);
 	pointsColumn.getStyleClass().add("right-align");
 
-	classementColumn = new TableColumn<>("Classement");
+	classementColumn = new TableColumn<>("CLS".toUpperCase());
 	classementColumn.setCellValueFactory(new PropertyValueFactory<ResultatModel, Integer>("classement"));
-	columnSize(classementColumn, 60);
+	columnSize(classementColumn, 80);
 	table.getColumns().add(classementColumn);
 	classementColumn.getStyleClass().add("right-align");
 
@@ -57,21 +57,22 @@ public class ResultatsTableColumns {
 		    setGraphic(null);
 
 		    TableRow<ResultatModel> currentRow = getTableRow();
-
-		    ResultatModel resultat = currentRow.getItem();
-		    currentRow.getStyleClass().clear();
-		    if (!isEmpty() && resultat != null) {
-			if ("DK".equals(resultat.getPoints())) {
-			    currentRow.getStyleClass().add("dk");
-			} else if ("0".equals(resultat.getPoints())) {
-			    currentRow.getStyleClass().add("sansfaute");
-			} else if ("---".equals(resultat.getPoints())) {
-			    currentRow.getStyleClass().add("noexists");
+		    if (currentRow != null) {
+			ResultatModel resultat = currentRow.getItem();
+			currentRow.getStyleClass().clear();
+			if (!isEmpty() && resultat != null) {
+			    if ("DK".equals(resultat.getPoints())) {
+				currentRow.getStyleClass().add("dk");
+			    } else if ("0".equals(resultat.getPoints())) {
+				currentRow.getStyleClass().add("sansfaute");
+			    } else if ("---".equals(resultat.getPoints())) {
+				currentRow.getStyleClass().add("noexists");
+			    } else {
+				currentRow.getStyleClass().add("ok");
+			    }
 			} else {
 			    currentRow.getStyleClass().add("ok");
 			}
-		    } else {
-			currentRow.getStyleClass().add("ok");
 		    }
 		}
 	    };
