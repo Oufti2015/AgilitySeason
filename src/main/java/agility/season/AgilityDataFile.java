@@ -2,7 +2,12 @@ package agility.season;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import agility.season.model.Chien;
+import agility.season.model.Resultat;
 import agility.season.utils.GsonUtils;
 import lombok.extern.log4j.Log4j;
 import sst.common.file.output.OutputFile;
@@ -31,6 +36,7 @@ public class AgilityDataFile {
 	    System.exit(-1);
 	}
 
+	print(result);
 	return result;
     }
 
@@ -43,5 +49,38 @@ public class AgilityDataFile {
 	    log.fatal("Cannot write file " + filename, e);
 	    System.exit(-1);
 	}
+    }
+
+    private void print(AgilityData result) {
+	List<Chien> chiens = result.getChiens();
+
+	chiens.stream()
+		.sorted()
+		.forEach(chien -> printChien(chien));
+    }
+
+    private void printChien(Chien chien) {
+
+	System.out.println("" + chien);
+	System.out.println();
+
+	List<Resultat> resultats = chien.getResultats();
+	List<Resultat> sortedList = resultats.stream().sorted(new Comparator<Resultat>() {
+	    @Override
+	    public int compare(Resultat a, Resultat b) {
+		int i = a.getDate().compareTo(b.getDate());
+		if (i == 0) {
+		    i = a.getActivite().compareTo(b.getActivite());
+		}
+		return i;
+	    }
+	}).collect(Collectors.toList());
+
+	int i = 1;
+	for (Resultat r : sortedList) {
+	    System.out.println(String.format("%02d - %s", i++, r));
+	}
+	System.out.println();
+
     }
 }
