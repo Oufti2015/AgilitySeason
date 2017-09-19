@@ -1200,8 +1200,20 @@
             "day": 17
           },
           "concours": "FLORENVILLE",
-          "points": "29",
+          "points": "29,43",
           "classement": 2,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 9,
+            "day": 17
+          },
+          "concours": "FLORENVILLE",
+          "points": "15",
+          "classement": 3,
           "dk": false
         }
       ]
