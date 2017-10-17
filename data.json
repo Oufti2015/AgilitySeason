@@ -579,6 +579,54 @@
           "points": null,
           "classement": 200,
           "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 14
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "0",
+          "classement": 11,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 14
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "10",
+          "classement": 67,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "0",
+          "classement": 11,
+          "dk": false
         }
       ]
     },
@@ -656,6 +704,54 @@
           "concours": "FLORENVILLE",
           "points": "10",
           "classement": 34,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 14
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 14
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": null,
+          "classement": 200,
+          "dk": true
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "0",
+          "classement": 13,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "20",
+          "classement": 84,
           "dk": false
         }
       ]
@@ -1215,6 +1311,30 @@
           "points": "15",
           "classement": 3,
           "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "20",
+          "classement": 27,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "10",
+          "classement": 24,
+          "dk": false
         }
       ]
     },
@@ -1748,6 +1868,30 @@
           "concours": "FLORENVILLE",
           "points": "15",
           "classement": 29,
+          "dk": false
+        },
+        {
+          "activite": "AGILITY",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "0",
+          "classement": 10,
+          "dk": false
+        },
+        {
+          "activite": "JUMPING",
+          "date": {
+            "year": 2017,
+            "month": 10,
+            "day": 15
+          },
+          "concours": "\u0027T KRUIRKE",
+          "points": "5",
+          "classement": 47,
           "dk": false
         }
       ]
