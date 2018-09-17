@@ -36,6 +36,9 @@ public class AgilityDataFile {
 	    System.exit(-1);
 	}
 
+	if (result == null) {
+	    result = new AgilityData();
+	}
 	print(result);
 	return result;
     }

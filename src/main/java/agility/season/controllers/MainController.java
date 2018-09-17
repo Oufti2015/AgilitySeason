@@ -150,8 +150,8 @@ public class MainController {
 	agilityTableView.getItems().setAll(agilityResultats);
 	jumpingTableView.getItems().setAll(jumpingResultats);
 
-	int agilitySum = calculateTotal(agilityResultats);
-	int jumpingSum = calculateTotal(jumpingResultats);
+	int agilitySum = calculateTotal(chien, agilityResultats);
+	int jumpingSum = calculateTotal(chien, jumpingResultats);
 
 	agilityTotal.setText("" + agilitySum);
 	jumpingTotal.setText("" + jumpingSum);
@@ -159,10 +159,10 @@ public class MainController {
 	total.setText("" + (agilitySum + jumpingSum));
     }
 
-    private int calculateTotal(List<ResultatModel> resultats) {
+    private int calculateTotal(Chien chien, List<ResultatModel> resultats) {
 	int result = resultats.stream().mapToInt(ResultatModel::getClassement).sum();
 	int count = resultats.size();
-	return result + ((15 - count) * 200);
+	return result + ((15 - count) * ((chien.getLarge()) ? 200 : 100));
     }
 
     @FXML
@@ -207,7 +207,7 @@ public class MainController {
 		selectChien();
 	    }
 	} catch (NumberFormatException nfe) {
-	    new Alert(AlertType.ERROR, "Le classement doit être numérique...", ButtonType.OK).showAndWait();
+	    new Alert(AlertType.ERROR, "Le classement doit ï¿½tre numï¿½rique...", ButtonType.OK).showAndWait();
 	}
     }
 
